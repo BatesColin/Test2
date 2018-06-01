@@ -6,6 +6,8 @@ var answer3 = $("select#question3").val();
 var answer4 = $("select#question4").val();
 var answer5 = $("select#question5").val();
 var css = 0
+var ruby = 0
+var c# = 0
 
 if (answer1 === "Front End"){
   css = css +1;
@@ -52,4 +54,13 @@ else if (answer5 === ){
 else if (answer5 === ){
    =  +1;
 }
-if (css > ruby && css > c#)
+if (css > ruby && css > c#){
+  ("#cssdiscription").show().
+}
+else if(ruby > css && ruby > c#){
+  ("#rubydiscription").show().
+}
+else if (c# > css && c# > ruby){
+  ("#c#discription").show().
+}
+else ("#c#discription").show().
