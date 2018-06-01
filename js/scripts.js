@@ -7,7 +7,7 @@ $(document).ready(function() {
     var answer5 = $("select#question5").val();
     var css = 0
     var ruby = 0
-    var c# = 0
+    var cSharp = 0
 
     if (answer1 === "Front End"){
       css = css +1;
@@ -16,10 +16,11 @@ $(document).ready(function() {
       ruby = ruby +1;
     }
     else if (answer1 === "Bit of Both"){
-      c# = c# +1;
+      cSharp = cSharp +1;
     }
-    else if (answer2 === "Yes Definitly!"){
-      c# = c# +1;
+
+    if (answer2 === "Yes Definitly!"){
+      cSharp = cSharp +1;
     }
     else if (answer2 === "I wouldnt Say No."){
       ruby = ruby +1;
@@ -27,43 +28,42 @@ $(document).ready(function() {
     else if (answer2 === "No"){
       css = css +1;
     }
-    else if (answer3 === "Very Easy"){
+
+    if (answer3 === "Very Easy"){
       css = css +1;
     }
     else if (answer3 === "Fairly Easy"){
       ruby = ruby +1;
     }
     else if (answer3 === "Good to know but not as easy to learn."){
-      c# = c# +1;
+      cSharp = cSharp +1;
     }
-    else if (answer4 === "Yes, all the time"){
+
+    if (answer4 === "Yes, all the time"){
       css = css +1;
     }
     else if (answer4 === "Not Really, but maybe if they offered me a job!"){
-      c# = c# +1;
+      cSharp = cSharp +1;
     }
     else if (answer4 === "as long as i dont have to make it look nice."){
       ruby = ruby +1;
     }
-    else if (answer5 === ){
-      =  +1;
+
+    if (answer5 === "yes"){
+    cSharp = cSharp +1;
     }
-    else if (answer5 === ){
-      =  +1;
+
+    if (css > ruby && css > cSharp){
+      $("#cssdiscription").show();
     }
-    else if (answer5 === ){
-      =  +1;
+    else if(ruby > css && ruby > cSharp){
+      $("#rubydiscription").show();
     }
-    if (css > ruby && css > c#){
-      ("#cssdiscription").show().
+    else if (cSharp > css && cSharp > ruby){
+      $("#csharpdiscription").show();
     }
-    else if(ruby > css && ruby > c#){
-      ("#rubydiscription").show().
-    }
-    else if (c# > css && c# > ruby){
-      ("#csharpdiscription").show().
-    }
-    else ("#csharpdiscription").show().
+    else $("#csharpdiscription").show();
     event.preventDefault();
+
   });
 });

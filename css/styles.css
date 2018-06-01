@@ -7,3 +7,12 @@
 #csharpdiscription {
   display: none;
 }
+body {
+  background-color: lightblue;
+}
+.container {
+  padding-left: 10px;
+}
+.jumbotron {
+  text-align: center;
+}
